@@ -1,0 +1,155 @@
+<%- include("./partials/head.ejs") %> 
+
+<body>
+    <!--Barra de navegación-->
+    <%- include("./partials/navBar.ejs") %>
+    
+    <!--Botón flotante de inicio de sesión-->
+
+    <button>
+        <a href="./login.ejs" class="btn btn-outline-dark btn-flotante p-0 m-auto d-flex align-items-center justify-content-around"><img src="/icon/user.svg"></a>
+    </button>
+    
+    <!--Cuerpo de la página-->
+
+    <div class="container marginBarra marginFooter">
+        <div class="row">
+            <!--Carrusel-->
+            <div id="carouselExampleCaptions" class="carousel slide col-12 p-0 m-0" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner altura75 overflow-hidden">
+                    <div class="carousel-item active">
+                        <img src="./img/002.jpg" class="d-block mx-auto altura75" alt="Living">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Photo by <a href="https://unsplash.com/@spacejoy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Spacejoy</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/003.jpg" class="d-block mx-auto altura75" alt="Living">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Photo by <a href="https://unsplash.com/@spacejoy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Spacejoy</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/008.jpg" class="d-block  mx-auto altura75" alt="Adornos">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Photo by <a href="https://unsplash.com/@thephotographermom?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shashi Chaturvedula</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+                        </div>
+                    </div>
+                </div>  
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!--Tarjetas de productos destacados-->
+
+        <div class="row">
+            <div class="col-12 pt-4 text-center">
+                <h2>Productos Destacados</h2>
+            </div>
+        </div>
+
+        <div class="row justify-content-around my-4">
+            <!--Producto 1-->
+            <div class="card p-0 border-dark shadow-lg col-3" style="width: 18rem;">
+                <div class="card-img-top overflow-hidden position-relative" style="height: 18rem;">
+                    <img src="./img/004.jpg" class="h-100 position-absolute top-50 start-50 translate-middle" alt="...">
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Photo by <a href="https://unsplash.com/@alexagorn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alexandra Gorn</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+                </div>
+            </div>
+            <!--Producto 2-->
+            <div class="card p-0 border-dark shadow-lg col-3" style="width: 18rem;">
+                <div class="card-img-top overflow-hidden position-relative" style="height: 18rem;">
+                    <img src="./img/005.jpg" class="h-100 position-absolute top-50 start-50 translate-middle" alt="...">
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Photo by <a href="https://unsplash.com/@linhlee?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Linh Le</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+                </div>
+            </div>
+            <!--Producto 3-->
+            <div class="card p-0 border-dark shadow-lg col-3" style="width: 18rem;">
+                <div class="card-img-top overflow-hidden position-relative" style="height: 18rem;">
+                    <img src="./img/006.jpg" class="h-100 position-absolute top-50 start-50 translate-middle" alt="...">
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Photo by <a href="https://unsplash.com/@tiagolopes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tiago Alexandre Lopes</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-around my-4">
+            <!--Producto 4-->
+            <div class="card p-0 border-dark shadow-lg col-3" style="width: 18rem;">
+                <div class="card-img-top overflow-hidden position-relative" style="height: 18rem;">
+                    <img src="./img/007.jpg" class="h-100 position-absolute top-50 start-50 translate-middle" alt="...">
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Photo by <a href="https://unsplash.com/@minhphamdesign?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Minh Pham</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+                </div>
+            </div>
+            <!--Producto 5-->
+            <div class="card p-0 border-dark shadow-lg col-3" style="width: 18rem;">
+                <div class="card-img-top overflow-hidden position-relative" style="height: 18rem;">
+                    <img src="./img/009.jpg" class="h-100 position-absolute top-50 start-50 translate-middle" alt="...">
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Photo by <a href="https://unsplash.com/@linhlee?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Linh Le</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+                </div>
+            </div>
+            <!--Producto 6-->
+            <div class="card p-0 border-dark shadow-lg col-3" style="width: 18rem;">
+                <div class="card-img-top overflow-hidden position-relative" style="height: 18rem;">
+                    <img src="./img/010.jpg" class="h-100 position-absolute top-50 start-50 translate-middle" alt="...">
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Photo by <a href="https://unsplash.com/@amyvosters?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Amy Vosters</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+
+    <div class="container-fluid p-0 position-relative">
+        <div class="row pie m-0 pt-3 position-absolute bottom-0 end-0 w-100">
+            <div class="col-6 text-center">
+                <h5>Información:</h5>
+                <ul class="m-0 p-0">
+                    <li class="h6">
+                        <a class="" href="#">Artículos</a>
+                    </li>
+                    <li class="h6">
+                        <a class="" href="#">Conocenos</a>
+                    </li>
+                    <li class="h6">
+                        <a class="" href="#">Contáctanos</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 text-center">
+                <h5>Seguinos en:</h5>
+                <a class="p-1" href="https://www.facebook.com/" role="button" aria-pressed="true" title="Facebook"><img src="./icon/facebook.svg" class="dark-spring-green" alt=""></a>
+                <a class="p-1" href="https://www.instagram.com/" role="button" aria-pressed="true" title="Instagram"><img src="./icon/instagram.svg" class="dark-spring-green" alt=""></a>
+
+            </div>
+        </div>
+    </div>
+
+    <!--JS Bootstrap-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

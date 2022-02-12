@@ -1,0 +1,77 @@
+.barraNav {
+    height: 6rem;
+}
+
+.marginBarra{
+    margin-top: 6rem;
+}
+
+.marginFooter{
+    margin-bottom: 13rem;
+}
+
+.pie{
+    height: 12rem;
+    background-color: #cfffb3ff;
+}
+
+.dark-spring-green{
+    color: #04724dff;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #04724dff;
+}
+
+ul li{
+    list-style: none;
+}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.altura75{
+    max-height: 75vh;
+}
+
+/* Boton Flotante*/
+
+.btn-flotante {
+    width: 3rem;
+    height:3rem;
+    color: #181818; /* Color del texto */
+    border-radius: 50%; /* Borde del boton */
+    letter-spacing: 2px; /* Espacio entre letras */
+    background-color: #cfffb3; /* Color de fondo */
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    transition: all 300ms ease 0ms;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1050;
+}
+
+.btn-flotante:hover {
+    background-color: #04724d; /* Color de fondo al pasar el cursor */
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+@media only screen and (max-width: 600px) {
+
+    .btn-flotante {
+        font-size: 14px;
+        padding: 12px 20px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/*Borde Input*/
+
+input:focus:focus-within {
+    outline:rgba(207,255,179, 0.8) solid 0.25rem;
+    border: rgba(4, 114, 77, 0.5) solid 0.1rem;
+}
