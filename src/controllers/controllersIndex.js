@@ -4,7 +4,7 @@ const fs = require("fs");
 //Obtención de Datos del archivo Json
 let productsIndex = JSON.parse(fs.readFileSync(path.resolve(__dirname, "..", "data", "productsIndex.json")));
 
-console.log({productsIndex});
+//console.log({productsIndex});
 
 module.exports = {
     index: function (req, res) {

@@ -1,20 +1,23 @@
+<!--HEAD-->
+
 <%- include("./partials/head.ejs") %> 
 
 <body>
     <!--Barra de navegación-->
+
     <%- include("./partials/navBar.ejs") %>
     
     <!--Botón flotante de inicio de sesión-->
 
-    <button>
-        <a href="./login.ejs" class="btn btn-outline-dark btn-flotante p-0 m-auto d-flex align-items-center justify-content-around"><img src="/icon/user.svg"></a>
-    </button>
+    <%- include("./partials/buttonFlot.ejs") %> 
     
     <!--Cuerpo de la página-->
 
-    <div class="container marginBarra marginFooter">
+    <div class="container marginBarra">
         <div class="row">
+
             <!--Carrusel-->
+            
             <div id="carouselExampleCaptions" class="carousel slide col-12 p-0 m-0" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -132,6 +135,7 @@
                 </div>
             </div>
         </div>-->
+        
     </div>
 
     <!--Footer-->
@@ -141,5 +145,6 @@
     <!--JS Bootstrap-->
 
     <%- include("./partials/jsBootstrap.ejs") %> 
+
 </body>
 </html>
