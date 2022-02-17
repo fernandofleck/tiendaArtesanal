@@ -1,0 +1,54 @@
+<!--HEAD-->
+
+<%- include("../partials/head.ejs") %> 
+
+<body>
+    <!--Barra de navegación-->
+
+    <%- include("../partials/navBar.ejs") %>
+    
+    <!--Botón flotante de inicio de sesión-->
+
+    <%- include("../partials/buttonFlot.ejs") %> 
+    
+    <!--Cuerpo de la página-->
+    
+    <div class="container marginBarra">
+        <div class="row">
+            <div class="col-12 pt-4 text-center mb-4">
+                <h2 class="">Nuestros Productos</h2>
+            </div>
+        </div>
+
+        <div class="row justify-content-around">
+            <% for( let i = 0; i < products.length; i++ ) { %>
+                <div class="card my-3 shadow p-0 card-flotante" style="width: 34rem;">
+                    <div class="row g-0">
+                        <div class="col-md-4 position-relative">
+                            <img src="./img/products/<%= products[i].img %>" class="float-start img-responsive w-100 rounded-start" alt="...">
+                            <div class="position-absolute bottom-0 w-100">
+                                <p class="card-text tiny text-center m-2 bg-light bg-opacity-25 rounded"><small class="">Photo by <a class="link-dark" href="<%= products[i].autorLink %>"><%= products[i].autor %></a> on <a class="link-dark" href='https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a></small></p>
+                            </div>
+                        </div>
+                        <div class="col-md-8 h-100">
+                            <div class="card-body h-100">
+                                <h5 class="card-title"><%= products[i].name %></h5>
+                                <p class="card-text"><%= products[i].description %></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </div>
+    
+    <!--Footer-->
+
+    <%- include("../partials/footer.ejs") %> 
+
+    <!--JS Bootstrap-->
+
+    <%- include("../partials/jsBootstrap.ejs") %> 
+
+</body>
+</html>
