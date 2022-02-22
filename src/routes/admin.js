@@ -4,10 +4,12 @@ const router = express.Router();
 const path = require("path");
 
 //Requerimiento de controlador
-const controllersProducts = require(path.resolve(__dirname, "..", "controllers", "controllersProducts.js"));
+const controllersAdmin = require(path.resolve(__dirname, "..", "controllers", "controllersAdmin.js"));
 
 //Creación de las rutas
-router.get("/products", controllersProducts.index);
+router.get("/admin", controllersAdmin.page);
+router.get("/admin/create", controllersAdmin.create);
+router.post("/admin/create", controllersAdmin.save);
 
 //Exportamos el módulo
 module.exports = router;

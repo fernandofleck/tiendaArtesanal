@@ -1,0 +1,101 @@
+<!--HEAD-->
+
+<%- include("../partials/head.ejs") %> 
+
+<body>
+    <!--Barra de navegación-->
+
+    <%- include("../partials/navBar.ejs") %>
+    
+    <!--Botón flotante de inicio de sesión-->
+
+    <%- include("../partials/buttonFlot.ejs") %> 
+    
+    <!--Cuerpo de la página-->
+    
+    <div class="container marginBarra">
+        <div class="row">
+            <div class="col-12 pt-4 text-center mb-4">
+                <h2 class="">Crear Nuevo Producto</h2>
+            </div>
+        </div>
+
+        <div class="row vw75 m-auto">
+            <form class="d-flex flex-column" action="/admin/create" method="POST">
+                <div class="row mb-3 mx-0 input-group">
+                    <label class="col-2 col-form-label">ID</label>
+                    <div class="col-10 p-0">
+                        <input name="id" type="number" class="form-control">
+                    </div>
+                </div>
+                <div class="row mb-3 mx-0 input-group">
+                    <label class="col-2 col-form-label">Nombre</label>
+                    <div class="col-10 p-0">
+                        <input name="name" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row mb-3 mx-0 input-group">
+                    <label class="col-2 col-form-label">Categoría</label>
+                    <div class="col-10 p-0">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="category" id="florerosCheck" value="Floreros">
+                            <label class="form-check-label" for="florerosCheck">Floreros</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="category" id="macetasCheck" value="Macetas">
+                            <label class="form-check-label" for="macetasCheck">Macetas</label>
+                        </div>
+                        <!--<input name="category" type="text" class="form-control">-->
+                    </div>
+                </div>
+                <div class="row mb-3 mx-0 input-group">
+                    <label class="col-2 col-form-label">Descripción</label>
+                    <div class="col-10 p-0">
+                        <input name="description" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row mb-3 mx-0 input-group">
+                    <label class="col-2 col-form-label">Precio</label>
+                    <div class="col-10 p-0">
+                        <input name="price" type="number" class="form-control">
+                    </div>
+                </div>
+                <div class="row mb-3 mx-0 input-group">
+                    <label class="col-2 col-form-label">Imagen</label>
+                    <div class="col-10 p-0">
+                        <input name="img" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row mb-3 mx-0 input-group">
+                    <label class="col-2 col-form-label">Autor</label>
+                    <div class="col-10 p-0">
+                        <input name="autor" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row mb-3 mx-0 input-group">
+                    <label class="col-2 col-form-label">Fuente</label>
+                    <div class="col-10 p-0">
+                        <input name="autorLink" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="mb-3 btn-group ms-auto">
+                    <a class="btn btn-dark alt3rem" href="/admin" role="button" title="Volver"><img src="/icon/rotate-ccw-light.svg" class="color-light" alt="Volver"></a>
+                    <button type="reset" class="btn btn-dark alt3rem" title="Borrar"><img src="/icon/wind.svg" class="color-light" alt="Borrar"></button>
+                    <button type="submit" class="btn btn-dark alt3rem" title="Guardar"><img src="/icon/save.svg" class="color-light" alt="Guardar"></button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+    
+    <!--Footer-->
+
+    <%- include("../partials/footer.ejs") %> 
+
+    <!--JS Bootstrap-->
+
+    <%- include("../partials/jsBootstrap.ejs") %> 
+
+</body>
+</html>

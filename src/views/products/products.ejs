@@ -31,9 +31,11 @@
                             </div>
                         </div>
                         <div class="col-md-8 h-100">
-                            <div class="card-body h-100">
-                                <h5 class="card-title"><%= products[i].name %></h5>
-                                <p class="card-text"><%= products[i].description %></p>
+                            <div class="card-body row h-100 position-relative">
+                                <h5 class="card-title col-12 fs-3"><%= products[i].name %></h5>
+                                <p class="card-text col-12"><%= products[i].description %></p>
+                                <p class="card-text m-0 col-10 text-end align-self-end fs-2">$ <%= products[i].price %></p>
+                                <a class="card-link col-2 align-self-end fs-2" href="#" title="Añadir Producto al Carrito"><img src="./icon/shopping-cart.svg" class="dark-spring-green" alt=""></a>
                             </div>
                         </div>
                     </div>

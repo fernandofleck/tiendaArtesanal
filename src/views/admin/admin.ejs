@@ -1,0 +1,63 @@
+<!--HEAD-->
+
+<%- include("../partials/head.ejs") %> 
+
+<body>
+    <!--Barra de navegación-->
+
+    <%- include("../partials/navBar.ejs") %>
+    
+    <!--Botón flotante de inicio de sesión-->
+
+    <%- include("../partials/buttonFlot.ejs") %> 
+    
+    <!--Cuerpo de la página-->
+    
+    <div class="container marginBarra">
+        <div class="row">
+            <div class="col-12 pt-4 text-center mb-4">
+                <h2 class="">Administrar Productos</h2>
+            </div>
+        </div>
+
+        <a class="btn shadow btn-flotante-e2 btn-flot-hover p-0 m-auto d-flex align-items-center justify-content-around" href="/admin/create" title="Añadir Producto"><img src="./icon/plus-circle.svg" class="dark-spring-green" alt="Añadir Producto"></a>
+
+        <div class="row justify-content-around">
+            <table class="table table-sm table-hover">
+                <thead>
+                    <tr class="text-center">
+                        <th scope="col">id</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Categoría</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col-1">Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for( let i = 0; i < products.length; i++ ) { %>
+                        <tr class="text-center align-middle">
+                            <th scope="row"><%= products[i].id %></th>
+                            <td><%= products[i].name %></td>
+                            <td><%= products[i].category %></td>
+                            <td><%= products[i].description %></td>
+                            <td>$ <%= products[i].price %></td>
+                            <td><button type="button" class="btn btn-sm" aria-label="Eliminar"><img src="/icon/trash-2.svg" class="color-light" alt="Volver"></button></td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    
+    <!--Footer-->
+
+    <%- include("../partials/footer.ejs") %> 
+
+    <!--JS Bootstrap-->
+
+    <%- include("../partials/jsBootstrap.ejs") %> 
+
+</body>
+</html>

@@ -1,110 +1,142 @@
 [
-    {
-        "id": 1,
-        "name": "Product Name",
-        "description": "Description of product",
-        "price": 0,
-        "img": "galina-n-miziNqvJx5M-unsplash.jpg",
-        "autor": "Galina N",
-        "autorLink": "https://unsplash.com/@galina88?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-    },
-    {
-        "id": 2,
-        "name": "Product Name",
-        "description": "Description of product",
-        "price": 0,
-        "img": "oshin-khandelwal-fq839fSNEuo-unsplash.jpg",
-        "autor": "Oshin Khandelwal",
-        "autorLink": "https://unsplash.com/@thebloomintale?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-    },
-    {
-        "id": 3,
-        "name": "Product Name",
-        "description": "Description of product",
-        "price": 0,
-        "img": "freddie-marriage-UcfKYTan-LU-unsplash.jpg",
-        "autor": "freddie marriage",
-        "autorLink": "https://unsplash.com/@fredmarriage"
-    },
-    {
-        "id": 4,
-        "name": "Product Name",
-        "description": "Description of product",
-        "price": 0,
-        "img": "art-and-soil-bangalore-W4ZUFRJIWHw-unsplash.jpg",
-        "autor": "Art and Soil Bangalore",
-        "autorLink": "https://unsplash.com/@artandsoil"
-    },
-    {
-        "id": 5,
-        "name": "Product Name",
-        "description": "Description of product",
-        "price": 0,
-        "img": "jannet-serhan-fSsAcx5URLA-unsplash.jpg",
-        "autor": "Jannet Serhan",
-        "autorLink": "https://unsplash.com/@printandproper"
-    },
-    {
-        "id": 6,
-        "name": "Product Name",
-        "description": "Description of product",
-        "price": 0,
-        "img": "kara-eads-gVUV7PbSu_0-unsplash.jpg",
-        "autor": "Kara Eads",
-        "autorLink": "https://unsplash.com/@karaeads"
-    },
-    {
-        "id": 7,
-        "name": "Product Name",
-        "description": "Description of product",
-        "price": 0,
-        "img": "annie-spratt-OlUNA6dteb0-unsplash.jpg",
-        "autor": "Annie Spratt",
-        "autorLink": "https://unsplash.com/@anniespratt"
-    },
-    {
-        "id": 8,
-        "name": "Product Name",
-        "description": "Description of product",
-        "price": 0,
-        "img": "vera-cho-bf0FRl7p_rE-unsplash.jpg",
-        "autor": "Vera Cho",
-        "autorLink": "https://unsplash.com/@yunweimeng"
-    },
-    {
-        "id": 9,
-        "name": "Product Name",
-        "description": "Description of product",
-        "price": 0,
-        "img": "ivy-aralia-nizar-Si4PIiajJVU-unsplash.jpg",
-        "autor": "Ivy Aralia Nizar",
-        "autorLink": "https://unsplash.com/@ivyaralianizar"
-    },
-    {
-        "id": 10,
-        "name": "Product Name",
-        "description": "Description of product",
-        "price": 0,
-        "img": "annie-spratt-S7viz8JWxwY-unsplash.jpg",
-        "autor": "Annie Spratt",
-        "autorLink": "https://unsplash.com/@anniespratt"
-    },
-    {
-        "id": 11,
-        "name": "Product Name",
-        "description": "Description of product",
-        "price": 0,
-        "img": "priscilla-du-preez-0byOuAKmAbg-unsplash.jpg",
-        "autor": "Priscilla Du Preez",
-        "autorLink": "https://unsplash.com/@priscilladupreez"
-    },
-    {
-        "id": 12,
-        "name": "Product Name",
-        "description": "Description of product",
-        "price": 0,
-        "img": "gaelle-marcel-yO9ZVNFbpao-unsplash.jpg",
-        "autor": "Gaelle Marcel",
-        "autorLink": "https://unsplash.com/@gaellemarcel"
-    }
+  {
+    "id": 1,
+    "name": "Maceta Celeste",
+    "category": "Maceta",
+    "description": "Description of product",
+    "price": 500,
+    "img": "galina-n-miziNqvJx5M-unsplash.jpg",
+    "autor": "Galina N",
+    "autorLink": "https://unsplash.com/@galina88?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+  },
+  {
+    "id": 2,
+    "name": "Florero Cerámico",
+    "category": "Florero",
+    "description": "Description of product",
+    "price": 600,
+    "img": "oshin-khandelwal-fq839fSNEuo-unsplash.jpg",
+    "autor": "Oshin Khandelwal",
+    "autorLink": "https://unsplash.com/@thebloomintale?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+  },
+  {
+    "id": 3,
+    "name": "Maceta Cemento",
+    "category": "Maceta",
+    "description": "Description of product",
+    "price": 500,
+    "img": "freddie-marriage-UcfKYTan-LU-unsplash.jpg",
+    "autor": "freddie marriage",
+    "autorLink": "https://unsplash.com/@fredmarriage"
+  },
+  {
+    "id": 4,
+    "name": "Maceta Madera",
+    "category": "Maceta",
+    "description": "Description of product",
+    "price": 400,
+    "img": "art-and-soil-bangalore-W4ZUFRJIWHw-unsplash.jpg",
+    "autor": "Art and Soil Bangalore",
+    "autorLink": "https://unsplash.com/@artandsoil"
+  },
+  {
+    "id": 5,
+    "name": "Maceta Cemento Blanco",
+    "category": "Maceta",
+    "description": "Description of product",
+    "price": 1000,
+    "img": "jannet-serhan-fSsAcx5URLA-unsplash.jpg",
+    "autor": "Jannet Serhan",
+    "autorLink": "https://unsplash.com/@printandproper"
+  },
+  {
+    "id": 6,
+    "name": "Maceta Bronce",
+    "category": "Maceta",
+    "description": "Description of product",
+    "price": 700,
+    "img": "kara-eads-gVUV7PbSu_0-unsplash.jpg",
+    "autor": "Kara Eads",
+    "autorLink": "https://unsplash.com/@karaeads"
+  },
+  {
+    "id": 7,
+    "name": "Maceta Barro",
+    "category": "Maceta",
+    "description": "Description of product",
+    "price": 600,
+    "img": "annie-spratt-OlUNA6dteb0-unsplash.jpg",
+    "autor": "Annie Spratt",
+    "autorLink": "https://unsplash.com/@anniespratt"
+  },
+  {
+    "id": 8,
+    "name": "Maceta Cerámica",
+    "category": "Maceta",
+    "description": "Description of product",
+    "price": 500,
+    "img": "vera-cho-bf0FRl7p_rE-unsplash.jpg",
+    "autor": "Vera Cho",
+    "autorLink": "https://unsplash.com/@yunweimeng"
+  },
+  {
+    "id": 9,
+    "name": "Maceta Tonos",
+    "category": "Maceta",
+    "description": "Description of product",
+    "price": 750,
+    "img": "ivy-aralia-nizar-Si4PIiajJVU-unsplash.jpg",
+    "autor": "Ivy Aralia Nizar",
+    "autorLink": "https://unsplash.com/@ivyaralianizar"
+  },
+  {
+    "id": 10,
+    "name": "Maceta Circular Delux",
+    "category": "Maceta",
+    "description": "Description of product",
+    "price": 850,
+    "img": "annie-spratt-S7viz8JWxwY-unsplash.jpg",
+    "autor": "Annie Spratt",
+    "autorLink": "https://unsplash.com/@anniespratt"
+  },
+  {
+    "id": 11,
+    "name": "Maceta Cerámica Lg",
+    "category": "Maceta",
+    "description": "Description of product",
+    "price": 1500,
+    "img": "priscilla-du-preez-0byOuAKmAbg-unsplash.jpg",
+    "autor": "Priscilla Du Preez",
+    "autorLink": "https://unsplash.com/@priscilladupreez"
+  },
+  {
+    "id": 12,
+    "name": "Maceta Blanca c/ Soporte",
+    "category": "Maceta",
+    "description": "Description of product",
+    "price": 650,
+    "img": "gaelle-marcel-yO9ZVNFbpao-unsplash.jpg",
+    "autor": "Gaelle Marcel",
+    "autorLink": "https://unsplash.com/@gaellemarcel"
+  },
+  {
+    "id": "13",
+    "name": "Maceta Cerdito",
+    "category": "Macetas",
+    "description": "Maceta cerámica con forma de cerdito",
+    "price": "700",
+    "img": "art-and-soil-bangalore-66HKMVJIae4-unsplash.jpg",
+    "autor": "Art and Soil Bangalore",
+    "autorLink": "https://unsplash.com/@artandsoil"
+  },
+  {
+    "id": "14",
+    "name": "qwe",
+    "category": "1",
+    "description": "qwe",
+    "price": "123",
+    "img": "wqe.jpg",
+    "autor": "qwe",
+    "autorLink": "qwe"
+  }
 ]
