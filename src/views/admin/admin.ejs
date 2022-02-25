@@ -31,6 +31,7 @@
                         <th scope="col">Categoría</th>
                         <th scope="col">Descripción</th>
                         <th scope="col">Precio</th>
+                        <th scope="col-1">Editar</th>
                         <th scope="col-1">Eliminar</th>
                     </tr>
                 </thead>
@@ -38,11 +39,12 @@
                     <% for( let i = 0; i < products.length; i++ ) { %>
                         <tr class="text-center align-middle">
                             <th scope="row"><%= products[i].id %></th>
-                            <td><%= products[i].name %></td>
+                            <td><a class="link-dark text-decoration-none" href="/productAd/<%= products[i].id %>"><%= products[i].name %></a></td>
                             <td><%= products[i].category %></td>
                             <td><%= products[i].description %></td>
                             <td>$ <%= products[i].price %></td>
-                            <td><button type="button" class="btn btn-sm" aria-label="Eliminar"><img src="/icon/trash-2.svg" class="color-light" alt="Volver"></button></td>
+                            <td><button type="button" class="btn btn-sm" title="Editar" aria-label="Editar"><img src="/icon/edit.svg" class="color-light" alt="Editar"></button></td>
+                            <td><button type="button" class="btn btn-sm" title="Eliminar" aria-label="Eliminar"><img src="/icon/trash-2.svg" class="color-light" alt="Eliminar"></button></td>
                         </tr>
                     <% } %>
                 </tbody>

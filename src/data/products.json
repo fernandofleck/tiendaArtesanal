@@ -138,5 +138,25 @@
     "img": "wqe.jpg",
     "autor": "qwe",
     "autorLink": "qwe"
+  },
+  {
+    "id": "15",
+    "name": "sdg",
+    "category": "Macetas",
+    "description": "dsffg",
+    "price": "28",
+    "img": "sdffg.jpg",
+    "autor": "sdffg",
+    "autorLink": "sdffg"
+  },
+  {
+    "id": "16",
+    "name": "qwer",
+    "category": "Floreros",
+    "description": "qwer",
+    "price": "654",
+    "img": "qwer.jpg",
+    "autor": "qwer",
+    "autorLink": "qwer"
   }
 ]

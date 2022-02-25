@@ -16,13 +16,25 @@
     <div class="container marginBarra">
         <div class="row">
             <div class="col-12 pt-4 text-center mb-4">
-                <h2 class="">Nuestros Productos</h2>
+                <h2 class=""><%= productChoice.name %></h2>
             </div>
         </div>
 
-        <div class="row justify-content-around">
-            <div class="col">
-                <p class="fs-3">Producto</p>
+        <div class="card my-3 mb-4 shadow p-0 w-75 m-auto">
+            <div class="row g-0">
+                <div class="col-md-4 position-relative card-flotante">
+                    <img src="/img/products/<%= productChoice.img %>" class="float-start img-responsive w-100 rounded-start" alt="...">
+                    <div class="position-absolute bottom-0 w-100">
+                        <p class="card-text tiny text-center m-2 bg-light bg-opacity-25 rounded"><small class="">Photo by <a class="link-dark" href="<%= productChoice.autorLink %>"><%= productChoice.autor %></a> on <a class="link-dark" href='https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a></small></p>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body row h-100">
+                        <p class="card-text col-12"><%= productChoice.description %></p>
+                        <p class="card-text col-10 text-end fs-1 mb-0 mt-auto">$ <%= productChoice.price %></p>
+                        <a class="card-link col-2 fs-1 mt-auto" href="#" title="Añadir Producto al Carrito"><img src="/icon/shopping-cart.svg" class="" alt=""></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

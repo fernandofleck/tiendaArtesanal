@@ -23,22 +23,24 @@
         <div class="row justify-content-around">
             <% for( let i = 0; i < products.length; i++ ) { %>
                 <div class="card my-3 shadow p-0 card-flotante" style="width: 34rem;">
-                    <div class="row g-0">
-                        <div class="col-md-4 position-relative">
-                            <img src="./img/products/<%= products[i].img %>" class="float-start img-responsive w-100 rounded-start" alt="...">
-                            <div class="position-absolute bottom-0 w-100">
-                                <p class="card-text tiny text-center m-2 bg-light bg-opacity-25 rounded"><small class="">Photo by <a class="link-dark" href="<%= products[i].autorLink %>"><%= products[i].autor %></a> on <a class="link-dark" href='https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a></small></p>
+                    <a href="/product/<%= products[i].id %>">
+                        <div class="row g-0">
+                            <div class="col-md-4 position-relative">
+                                <img src="./img/products/<%= products[i].img %>" class="float-start img-responsive w-100 rounded-start" alt="...">
+                                <div class="position-absolute bottom-0 w-100">
+                                    <p class="card-text tiny text-center m-2 bg-light bg-opacity-25 rounded"><small class="">Photo by <a class="link-dark" href="<%= products[i].autorLink %>"><%= products[i].autor %></a> on <a class="link-dark" href='https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a></small></p>
+                                </div>
+                            </div>
+                            <div class="col-md-8 h-100">
+                                <div class="card-body row h-100 position-relative">
+                                    <h5 class="card-title col-12 fs-3"><%= products[i].name %></h5>
+                                    <p class="card-text col-12"><%= products[i].description %></p>
+                                    <p class="card-text m-0 col-10 text-end align-self-end fs-2">$ <%= products[i].price %></p>
+                                    <a class="card-link col-2 align-self-end fs-2" href="#" title="Añadir Producto al Carrito"><img src="./icon/shopping-cart.svg" class="dark-spring-green" alt=""></a>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-8 h-100">
-                            <div class="card-body row h-100 position-relative">
-                                <h5 class="card-title col-12 fs-3"><%= products[i].name %></h5>
-                                <p class="card-text col-12"><%= products[i].description %></p>
-                                <p class="card-text m-0 col-10 text-end align-self-end fs-2">$ <%= products[i].price %></p>
-                                <a class="card-link col-2 align-self-end fs-2" href="#" title="Añadir Producto al Carrito"><img src="./icon/shopping-cart.svg" class="dark-spring-green" alt=""></a>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             <% } %>
         </div>

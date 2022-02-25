@@ -8,6 +8,7 @@ const controllersProducts = require(path.resolve(__dirname, "..", "controllers",
 
 //Creación de las rutas
 router.get("/products", controllersProducts.index);
+router.get("/product/:id", controllersProducts.show);
 
 //Exportamos el módulo
 module.exports = router;

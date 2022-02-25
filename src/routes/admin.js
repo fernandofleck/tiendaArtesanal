@@ -10,6 +10,7 @@ const controllersAdmin = require(path.resolve(__dirname, "..", "controllers", "c
 router.get("/admin", controllersAdmin.page);
 router.get("/admin/create", controllersAdmin.create);
 router.post("/admin/create", controllersAdmin.save);
+router.get("/productAd/:id", controllersAdmin.show);
 
 //Exportamos el módulo
 module.exports = router;

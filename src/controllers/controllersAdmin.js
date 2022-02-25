@@ -36,5 +36,20 @@ module.exports = {
 
         //Redireccionamos a la vista del administrador
         res.redirect("/admin");
+    },
+    show: (req, res) => {
+        //res.send(req.params.id);
+        // Se declara variable que se enviara a la vista
+        let productChoice;
+
+        // Se busca y almacena el producto deseado
+        products.forEach(product => {
+            if(product.id == req.params.id) {
+                productChoice = product;
+            }
+        });
+
+        // Enviamos la vista con los datos del producto
+        res.render(path.resolve(__dirname, "..", "views", "products", "product.ejs"), {productChoice});
     }
 }
