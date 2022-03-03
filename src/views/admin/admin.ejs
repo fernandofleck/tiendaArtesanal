@@ -44,7 +44,7 @@
                             <td><%= products[i].description %></td>
                             <td>$ <%= products[i].price %></td>
                             <td><button type="button" class="btn btn-sm" title="Editar" aria-label="Editar"><img src="/icon/edit.svg" class="color-light" alt="Editar"></button></td>
-                            <td><button type="button" class="btn btn-sm" title="Eliminar" aria-label="Eliminar"><img src="/icon/trash-2.svg" class="color-light" alt="Eliminar"></button></td>
+                            <td><a type="button" class="btn btn-sm" title="Eliminar" aria-label="Eliminar" href="/admin/delete/<%= products[i].id %>"><img src="/icon/trash-2.svg" class="color-light" alt="Eliminar"></a></td>
                         </tr>
                     <% } %>
                 </tbody>

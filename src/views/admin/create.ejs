@@ -21,17 +21,17 @@
         </div>
 
         <div class="row vw75 m-auto">
-            <form class="d-flex flex-column" action="/admin/create" method="POST">
+            <form class="d-flex flex-column" action="/admin/create" method="POST" enctype="multipart/form-data"> <!-- Cada vez que hagamos un formulario donde el archivo viaje a la ruta que especifiquemos tenemos que agregar: enctype = "multipart/form-data" -->
                 <div class="row mb-3 mx-0 input-group">
                     <label class="col-2 col-form-label">ID</label>
                     <div class="col-10 p-0">
-                        <input name="id" type="number" class="form-control">
+                        <input name="id" type="number" class="form-control" required>
                     </div>
                 </div>
                 <div class="row mb-3 mx-0 input-group">
                     <label class="col-2 col-form-label">Nombre</label>
                     <div class="col-10 p-0">
-                        <input name="name" type="text" class="form-control">
+                        <input name="name" type="text" class="form-control" required>
                     </div>
                 </div>
                 <div class="row mb-3 mx-0 input-group">
@@ -51,31 +51,31 @@
                 <div class="row mb-3 mx-0 input-group">
                     <label class="col-2 col-form-label">Descripción</label>
                     <div class="col-10 p-0">
-                        <input name="description" type="text" class="form-control">
+                        <input name="description" type="text" class="form-control" required>
                     </div>
                 </div>
                 <div class="row mb-3 mx-0 input-group">
                     <label class="col-2 col-form-label">Precio</label>
                     <div class="col-10 p-0">
-                        <input name="price" type="number" class="form-control">
+                        <input name="price" type="number" class="form-control" required>
                     </div>
                 </div>
                 <div class="row mb-3 mx-0 input-group">
                     <label class="col-2 col-form-label">Imagen</label>
-                    <div class="col-10 p-0">
-                        <input name="img" type="text" class="form-control">
+                    <div class="col-10 p-0 custom-file">
+                        <input name="img" type="file" class="form-control" multiple required>
                     </div>
                 </div>
                 <div class="row mb-3 mx-0 input-group">
                     <label class="col-2 col-form-label">Autor</label>
                     <div class="col-10 p-0">
-                        <input name="autor" type="text" class="form-control">
+                        <input name="autor" type="text" class="form-control" required>
                     </div>
                 </div>
                 <div class="row mb-3 mx-0 input-group">
                     <label class="col-2 col-form-label">Fuente</label>
                     <div class="col-10 p-0">
-                        <input name="autorLink" type="text" class="form-control">
+                        <input name="autorLink" type="text" class="form-control" required>
                     </div>
                 </div>
                 <div class="mb-3 btn-group ms-auto">

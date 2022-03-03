@@ -1,17 +1,22 @@
 const path = require("path");
 const fs = require("fs");
 
-//Obtención de Datos del archivo Json
-let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, "..", "data", "products.json")));
-
 module.exports = {
     page: function (req, res) {
+        //Obtención de Datos del archivo Json
+        let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, "..", "data", "products.json")));
+        
         res.render(path.resolve(__dirname, "..", "views", "admin", "admin.ejs"), {products});
     },
     create: function (req, res) {
+        //Obtención de Datos del archivo Json
+        let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, "..", "data", "products.json")));
+
         res.render(path.resolve(__dirname, "..", "views", "admin", "create.ejs"));
     },
     save: function (req, res) {
+        //Obtención de Datos del archivo Json
+        let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, "..", "data", "products.json")));
 
         //Aqui se indica el formato de como se va a guardar la información
         let newProduct = {
@@ -20,7 +25,7 @@ module.exports = {
             category: req.body.category,
             description: req.body.description,
             price: req.body.price,
-            img: req.body.img + ".jpg",
+            img: req.files[0].filename,
             autor: req.body.autor,
             autorLink: req.body.autorLink 
         }
@@ -38,6 +43,9 @@ module.exports = {
         res.redirect("/admin");
     },
     show: (req, res) => {
+        //Obtención de Datos del archivo Json
+        let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, "..", "data", "products.json")));
+
         //res.send(req.params.id);
         // Se declara variable que se enviara a la vista
         let productChoice;
@@ -51,5 +59,24 @@ module.exports = {
 
         // Enviamos la vista con los datos del producto
         res.render(path.resolve(__dirname, "..", "views", "products", "product.ejs"), {productChoice});
+    },
+    delete: (req, res) => {
+        //Obtención de Datos del archivo Json
+        let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, "..", "data", "products.json")));
+
+        // Guardamos el producto a borrar
+        const productDeleteId = req.params.id;
+
+        // Filtramos el arreglo original para eliminar el producto a borrar
+        const filteredProducts = products.filter(product => product.id != productDeleteId);
+
+        // Se convierte el arreglo en un string y se indica que un producto se guarda bajo el otro con null, 2.
+        let productsToSave = JSON.stringify(filteredProducts, null, 2);
+
+        // Se sobreescribe el archivo JSON
+        fs.writeFileSync(path.resolve(__dirname, "..", "data", "products.json"), productsToSave);
+
+        // Redireccionamos a la vista
+        res.redirect("/admin");
     }
 }
