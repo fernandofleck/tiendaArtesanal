@@ -43,7 +43,7 @@
                             <td><%= products[i].category %></td>
                             <td><%= products[i].description %></td>
                             <td>$ <%= products[i].price %></td>
-                            <td><button type="button" class="btn btn-sm" title="Editar" aria-label="Editar"><img src="/icon/edit.svg" class="color-light" alt="Editar"></button></td>
+                            <td><a type="button" class="btn btn-sm" title="Editar" aria-label="Editar" href="/admin/edit/<%= products[i].id %>"><img src="/icon/edit.svg" class="color-light" alt="Editar"></a></td>
                             <td><a type="button" class="btn btn-sm" title="Eliminar" aria-label="Eliminar" href="/admin/delete/<%= products[i].id %>"><img src="/icon/trash-2.svg" class="color-light" alt="Eliminar"></a></td>
                         </tr>
                     <% } %>

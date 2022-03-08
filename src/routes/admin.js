@@ -26,6 +26,8 @@ router.get("/admin/create", controllersAdmin.create);
 router.post("/admin/create", upload.any("img"), controllersAdmin.save);
 router.get("/productAd/:id", controllersAdmin.show);
 router.get("/admin/delete/:id", controllersAdmin.delete);
+router.get("/admin/edit/:id", controllersAdmin.edit);
+router.put("/admin/edit/:id", upload.any("img"), controllersAdmin.updateProducts);
 
 //Exportamos el módulo
 module.exports = router;

@@ -78,5 +78,49 @@ module.exports = {
 
         // Redireccionamos a la vista
         res.redirect("/admin");
+    },
+    edit: (req, res) => {
+        //Obtención de Datos del archivo Json
+        let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, "..", "data", "products.json")));
+
+        // Guardamos el producto a editar
+        const productEditId = req.params.id;
+
+        // Buscamos en el arreglo original el producto a editar
+        const editProduct = products.find(product => product.id == productEditId);
+
+        // Renderizamos y enviamos datos a la vista
+        res.render(path.resolve(__dirname, "..", "views", "admin", "edit.ejs"), {editProduct});
+    },
+    updateProducts: (req, res) => {
+        //Obtención de Datos del archivo Json
+        let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, "..", "data", "products.json")));
+
+        // Guardamos el producto editado
+        //const productEditId = req.params.id;
+
+        console.log("REQ.BODY.IMGACTUAL: "+ req.body.imgActual);
+        console.log("RRR ");
+        console.log("REQ.BODY.IMG: "+ req.body.img);
+
+        //Utilizamos un if ternario para saber si se ha enviado una nueva imagen. Si está llegando una imagen nueva en el req.file => guardar el nombre nuevo. En caso de que no haya entrado nada se mantiene la misma imagen anterior.
+        req.body.img = req.files[0] ? req.files[0].filename : req.body.img;
+
+        // Actualizamos el producto en la lista
+        let productsUpdate = products.map(product => {
+            if(product.id == req.body.id){
+                product = req.body;
+            };
+            return product;
+        });
+
+        // Se convierte el arreglo en un string y se indica que un producto se guarda bajo el otro con null, 2.
+        let productsToSave = JSON.stringify(productsUpdate, null, 2);
+
+        // Se sobreescribe el archivo JSON
+        fs.writeFileSync(path.resolve(__dirname, "..", "data", "products.json"), productsToSave);
+
+        // Redireccionamos a la vista
+        res.redirect("/admin");
     }
 }

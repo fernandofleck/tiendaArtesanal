@@ -1,0 +1,103 @@
+<!--HEAD-->
+
+<%- include("../partials/head.ejs") %> 
+
+<body>
+    <!--Barra de navegación-->
+
+    <%- include("../partials/navBar.ejs") %>
+    
+    <!--Botón flotante de inicio de sesión-->
+
+    <%- include("../partials/buttonFlot.ejs") %> 
+    
+    <!--Cuerpo de la página-->
+    
+    <div class="container marginBarra">
+        <div class="row">
+            <div class="col-12 pt-4 text-center mb-4">
+                <h2 class="">Editando Producto <%= editProduct.id %> </h2>
+            </div>
+        </div>
+
+        <div class="row vw75 m-auto">
+            <form class="d-flex flex-column" action="/admin/edit/<%= editProduct.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> <!-- Cada vez que hagamos un formulario donde el archivo viaje a la ruta que especifiquemos tenemos que agregar: enctype = "multipart/form-data" -->
+                <div class="row mb-3 mx-0 input-group">
+                    <label class="col-2 col-form-label">ID</label>
+                    <div class="col-10 p-0">
+                        <input name="id" type="number" class="form-control" required value="<%= editProduct.id %>">
+                    </div>
+                </div>
+                <div class="row mb-3 mx-0 input-group">
+                    <label class="col-2 col-form-label">Nombre</label>
+                    <div class="col-10 p-0">
+                        <input name="name" type="text" class="form-control" required value="<%= editProduct.name %>">
+                    </div>
+                </div>
+                <div class="row mb-3 mx-0 input-group">
+                    <label class="col-2 col-form-label">Categoría</label>
+                    <div class="col-10 p-0">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="category" id="florerosCheck" value="Floreros">
+                            <label class="form-check-label" for="florerosCheck">Floreros</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="category" id="macetasCheck" value="Macetas">
+                            <label class="form-check-label" for="macetasCheck">Macetas</label>
+                        </div>
+                        <!--<input name="category" type="text" class="form-control">-->
+                    </div>
+                </div>
+                <div class="row mb-3 mx-0 input-group">
+                    <label class="col-2 col-form-label">Descripción</label>
+                    <div class="col-10 p-0">
+                        <input name="description" type="text" class="form-control" required value="<%= editProduct.description %>">
+                    </div>
+                </div>
+                <div class="row mb-3 mx-0 input-group">
+                    <label class="col-2 col-form-label">Precio</label>
+                    <div class="col-10 p-0">
+                        <input name="price" type="number" class="form-control" required value="<%= editProduct.price %>">
+                    </div>
+                </div>
+                <div class="row mb-3 mx-0 input-group">
+                    <img class="col-4 p-0 img-thumbnail" src="/img/products/<%= editProduct.img %>" alt="Imagen <%= editProduct.name %>">
+                    <label class="col-2 col-form-label">Imagen</label>
+                    <div class="col-6 p-0 custom-file">
+                        <input name="img" type="hidden" class="form-control" value="<%= editProduct.img %>">
+                        <input name="img" type="file" class="form-control" multiple>
+                    </div>
+                </div>
+                <div class="row mb-3 mx-0 input-group">
+                    <label class="col-2 col-form-label">Autor</label>
+                    <div class="col-10 p-0">
+                        <input name="autor" type="text" class="form-control" required value="<%= editProduct.autor %> ">
+                    </div>
+                </div>
+                <div class="row mb-3 mx-0 input-group">
+                    <label class="col-2 col-form-label">Fuente</label>
+                    <div class="col-10 p-0">
+                        <input name="autorLink" type="text" class="form-control" required value="<%= editProduct.autorLink %> ">
+                    </div>
+                </div>
+                <div class="mb-3 btn-group ms-auto">
+                    <a class="btn btn-dark alt3rem" href="/admin" role="button" title="Volver"><img src="/icon/rotate-ccw-light.svg" class="color-light" alt="Volver"></a>
+                    <button type="reset" class="btn btn-dark alt3rem" title="Borrar"><img src="/icon/wind.svg" class="color-light" alt="Borrar"></button>
+                    <button type="submit" class="btn btn-dark alt3rem" title="Guardar"><img src="/icon/save.svg" class="color-light" alt="Guardar"></button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+    
+    <!--Footer-->
+
+    <%- include("../partials/footer.ejs") %> 
+
+    <!--JS Bootstrap-->
+
+    <%- include("../partials/jsBootstrap.ejs") %> 
+
+</body>
+</html>

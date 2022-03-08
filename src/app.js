@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var methodOverride = require("method-override");
 
 //Requerimos las rutas
 var indexRouter = require('./routes/index');
@@ -21,6 +22,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false })); //URL encode - Para que nos pueda llegar la información desde el formulario al req.body
 app.use(cookieParser());
 app.use(express.static(path.resolve(__dirname, "..", "public")));
+app.use(methodOverride("_method"));
 
 //Implementamos las rutas
 app.use(indexRouter);
