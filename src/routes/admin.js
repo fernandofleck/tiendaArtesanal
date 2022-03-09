@@ -20,8 +20,11 @@ const upload = multer({storage: storage});
 //Requerimiento de controlador
 const controllersAdmin = require(path.resolve(__dirname, "..", "controllers", "controllersAdmin.js"));
 
+// Requerimos Middlewares
+var maintenance = require('../middlewares/maintenance');
+
 //Creación de las rutas
-router.get("/admin", controllersAdmin.page);
+router.get("/admin", maintenance, controllersAdmin.page);
 router.get("/admin/create", controllersAdmin.create);
 router.post("/admin/create", upload.any("img"), controllersAdmin.save);
 router.get("/productAd/:id", controllersAdmin.show);

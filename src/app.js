@@ -11,6 +11,9 @@ var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
 var adminRouter = require('./routes/admin');
 
+// Requerimos middlewares
+var maintenance = require('./middlewares/maintenance');
+
 var app = express();
 
 // view engine setup
@@ -29,6 +32,9 @@ app.use(indexRouter);
 app.use(usersRouter);
 app.use(productsRouter);
 app.use(adminRouter);
+
+// Implementamos Middlewares
+app.use(maintenance);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
