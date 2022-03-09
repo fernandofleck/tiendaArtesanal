@@ -67,6 +67,17 @@ module.exports = {
         // Guardamos el producto a borrar
         const productDeleteId = req.params.id;
 
+        // Buscamos el nombre la imagen del producto a eliminar
+        const imgProductDelete = products.find(product => product.id == productDeleteId);
+
+        // Eliminamos la imagen. *Luego ver como funciona try y catch
+        try {
+            fs.unlinkSync(path.resolve(__dirname, "..", "..", "public", "img", "products", imgProductDelete.img));
+            console.log("Imagen removida: "+imgProductDelete.img);
+        } catch(err) {
+            console.error("Sucedio algo malo al remover el archivo", err);
+        };
+
         // Filtramos el arreglo original para eliminar el producto a borrar
         const filteredProducts = products.filter(product => product.id != productDeleteId);
 
